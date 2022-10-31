@@ -1,2 +1,4 @@
 */build
 */*.tar.xz
+#TODO: move to /usr/ports after release
+packages.db
