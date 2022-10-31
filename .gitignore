@@ -1,4 +1,6 @@
 */build
 */*.tar.xz
+crosscompiler.tar.xz
+x86_64-linux-musl-cross
 #TODO: move to /usr/ports after release
 packages.db
