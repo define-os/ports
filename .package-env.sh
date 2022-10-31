@@ -2,8 +2,9 @@
 
 #packagesdb="/usr/ports/packages.db"
 packagesdb="../packages.db"
-PORTDIR=$PWD
 
+PORTDIR=$PWD
+INSTALL_PATH="/usr/local"
 
 deps=()
 
@@ -34,10 +35,18 @@ log() {
 }
 
 #ERRORS
-installed_error(){
-    err 1 "Package '$port' installed!"
+installed_error() {
+    err 1 "Package '$port': installed"
 }
-
+build_error() {
+    err 2 "Package '$port': build"
+}
+install_error() {
+    err 3 "Package '$port': install"
+}
+source_download_error() {
+    err 4 "Package '$port': source code download"
+}
 #CODE
 install_deps() {
     for dep in "${deps[@]}"; do
@@ -63,9 +72,9 @@ log "Preparing to build $port"
 install_deps
 prepare_dirs
 echo "$port $version" >> $packagesdb
-#download_source
+download_source || source_download_error
 log "Building $port"
-build
+build || build_error
 log "Installing $port"
-install
+install || install_error
 log "Finish!"
