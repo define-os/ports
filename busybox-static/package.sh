@@ -13,6 +13,7 @@ build() {
 
 install() {
     make CONFIG_PREFIX=$INSTALL_PATH install
+    mkdir $INSTALL_PATH/usr
     ln -s $INSTALL_PATH/bin  $INSTALL_PATH/usr/bin
     ln -s $INSTALL_PATH/sbin $INSTALL_PATH/usr/sbin
 }
