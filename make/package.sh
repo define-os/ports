@@ -7,8 +7,8 @@ source_cd="$port-$version"
 source_name="$port"
 use_crosscompiler=true
 build() {
-    ./configure --prefix=$PREFIX --target=x86_64-pc-linux --host=x86_64-pc-linux
-    ./build.sh -j$(nproc)
+    ./configure --prefix=$PREFIX --target=x86_64-pc-linux --host=x86_64-pc-linux --disable-dependency-tracking
+    ./build.sh
 }
 
 install() {
