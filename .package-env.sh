@@ -8,7 +8,7 @@ packagesdb="$INSTALL_PATH/usr/ports/packages.db"
 cross_compiler_url="http://musl.cc/x86_64-linux-musl-cross.tgz"
 cross_compiler_base="$PORTDIR/../x86_64-linux-musl-cross/bin/x86_64-linux-musl-"
 
-deps=()
+deps=""
 source_cd="."
 use_crosscompiler=false
 
@@ -68,7 +68,7 @@ dep_build_error() {
 }
 #CODE
 install_deps() {
-    for dep in "${deps[@]}"; do
+    for dep in "${deps}"; do
         if [ -z "$(get_package_in_db $dep)" ]; then
             cd "${PORTDIR}/../$dep" 2>/dev/null|| dep_build_error
             ./package.sh
