@@ -1,7 +1,7 @@
 #!/usr/bin/sh
 #packagesdb="/usr/ports/packages.db"
 PORTDIR=$PWD/$(dirname $@)
-PREFIX="/usr/local"
+PREFIX="/usr"
 [ "x$INSTALL_PATH" == "x" ] && INSTALL_PATH="/"
 packagesdb="$INSTALL_PATH/usr/ports/packages.db"
 
