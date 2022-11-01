@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/sh
 #packagesdb="/usr/ports/packages.db"
 PORTDIR=$PWD/$(dirname $@)
 PREFIX="/usr/local"

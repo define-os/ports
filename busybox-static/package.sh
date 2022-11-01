@@ -1,4 +1,4 @@
-#!/usr/bin/env -S sh ../.package-env.sh
+#!/usr/bin/sh ../.package-env.sh
 _port='busybox'
 port="${_port}-static"
 version='1.35.0'

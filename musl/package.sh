@@ -1,4 +1,4 @@
-#!/usr/bin/env -S sh ../.package-env.sh
+#!/usr/bin/sh ../.package-env.sh
 port='musl'
 version='1.2.3'
 deps=()
