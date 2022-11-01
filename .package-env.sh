@@ -38,6 +38,7 @@ crosscompiler_install() {
     export AS="${cross_compiler_base}as"
     export AR="${cross_compiler_base}ar"
     export LD="${cross_compiler_base}ld"
+    export RANLIB="${cross_compiler_base}ranlib"
     export LD_LIBRARY_PATH="$PORTDIR/../x86_64-linux-musl-cross/x86_64-linux-musl/lib"
 }
 
