@@ -3,7 +3,7 @@
 packagesdb="../packages.db"
 
 PORTDIR=$PWD
-INSTALL_PATH="/usr/local"
+PREFIX="/usr/local"
 
 
 cross_compiler_url="http://musl.cc/x86_64-linux-musl-cross.tgz"

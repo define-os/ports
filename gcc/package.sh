@@ -22,7 +22,7 @@ build() {
     mkdir build
     cd build
 
-    ../configure --prefix=$INSTALL_PATH  \
+    ../configure --prefix=$PREFIX       \
         --enable-languages=c,c++         \
         --disable-multilib               \
         --disable-bootstrap
@@ -30,6 +30,6 @@ build() {
 }
 
 install() {
-    make install
+    make DESTDIR=$INSTALL_PATH install 
     ln -svr $INSTALL_PATH/bin/cpp $INSTALL_PATH/lib
 }

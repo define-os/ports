@@ -7,10 +7,10 @@ source_cd="$port-$version"
 source_name="$port"
 use_crosscompiler=true
 build() {
-    ./configure --prefix=$INSTALL_PATH
+    ./configure --prefix=$PREFIX
     make -j$(nproc)
 }
 
 install() {
-    make install
+    make DESTDIR=$INSTALL_PATH install
 }
