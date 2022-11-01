@@ -4,7 +4,7 @@ packagesdb="../packages.db"
 
 PORTDIR=$PWD/$(dirname $@)
 PREFIX="/usr/local"
-
+[ "x$INSTALL_PATH" == "x" ] && INSTALL_PATH="/"
 
 cross_compiler_url="http://musl.cc/x86_64-linux-musl-cross.tgz"
 cross_compiler_base="$PORTDIR/../x86_64-linux-musl-cross/bin/x86_64-linux-musl-"
