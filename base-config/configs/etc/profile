@@ -1,0 +1,7 @@
+PATH="$PATH:/bin:/sbin:/usr/bin:/usr/sbin:"
+LESS=-MM
+TERM=linux
+PS1='\u:\w\$ '
+PS2='> '
+ignoreeof=10
+export PATH DISPLAY LESS TERM PS1 PS2 HOME ignoreeof

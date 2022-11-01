@@ -1,0 +1,8 @@
+::sysinit:/etc/rc.sysinit
+
+::respawn:-/bin/sh
+
+::ctrlaltdel:/sbin/reboot
+
+::shutdown:/sbin/swapoff -a >/dev/null 2>&1
+::shutdown:/bin/umount -a -r >/dev/null 2>&1
