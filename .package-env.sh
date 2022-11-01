@@ -7,7 +7,7 @@ INSTALL_PATH="/usr/local"
 
 
 cross_compiler_url="http://musl.cc/x86_64-linux-musl-cross.tgz"
-cross_compiler_base="$PORTDIR/x86_64-linux-musl-cross/bin/x86_64-linux-musl-"
+cross_compiler_base="$PORTDIR/../x86_64-linux-musl-cross/bin/x86_64-linux-musl-"
 
 deps=()
 source_cd="."
@@ -39,6 +39,7 @@ crosscompiler_install() {
     export AS="${cross_compiler_base}as"
     export AR="${cross_compiler_base}ar"
     export LD="${cross_compiler_base}ld"
+    export LD_LIBRARY_PATH="$PORTDIR/../x86_64-linux-musl-cross/x86_64-linux-musl/lib"
 }
 
 err() {
