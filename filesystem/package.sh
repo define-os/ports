@@ -4,7 +4,7 @@ version='1.0'
 deps=""
 source_code="https://github.com/define-os/ports/raw/main/empty.tgz"
 source_cd="."
-use_crosscompiler=true
+use_crosscompiler=false
 build() {
     :
 }
