@@ -1,4 +1,4 @@
-#!/usr/bin/env -S bash ../.package-env.sh
+#!/usr/bin/env -S sh ../.package-env.sh
 port='gcc'
 version='11.2.0'
 deps=()

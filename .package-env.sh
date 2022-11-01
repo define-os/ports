@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 #packagesdb="/usr/ports/packages.db"
 packagesdb="../packages.db"
 
