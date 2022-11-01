@@ -13,4 +13,6 @@ build() {
 
 install() {
     make CONFIG_PREFIX=$INSTALL_PATH install
+    ln -s $INSTALL_PATH/bin/busybox $INSTALL_PATH/bin/adduser
+    ln -s $INSTALL_PATH/bin/busybox $INSTALL_PATH/bin/addgroup
 }
