@@ -17,4 +17,7 @@ install() {
     mkdir $INSTALL_PATH/usr/ports
     ln -s ../bin  $INSTALL_PATH/usr/bin
     ln -s ../sbin $INSTALL_PATH/usr/sbin
+    for dir in "dev proc sys tmp run"; do
+	mkdir $INSTALL_PATH/$dir
+    done
 }
