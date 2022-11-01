@@ -1,10 +1,9 @@
 #!/usr/bin/env sh
 #packagesdb="/usr/ports/packages.db"
-packagesdb="../packages.db"
-
 PORTDIR=$PWD/$(dirname $@)
 PREFIX="/usr/local"
 [ "x$INSTALL_PATH" == "x" ] && INSTALL_PATH="/"
+packagesdb="$INSTALL_PATH/usr/ports/packages.db"
 
 cross_compiler_url="http://musl.cc/x86_64-linux-musl-cross.tgz"
 cross_compiler_base="$PORTDIR/../x86_64-linux-musl-cross/bin/x86_64-linux-musl-"
@@ -52,7 +51,8 @@ log() {
 
 #ERRORS
 installed_error() {
-    err 1 "Package '$port': installed"
+    log "Package '$port': installed"
+    exit 0
 }
 build_error() {
     err 2 "Package '$port': build"
