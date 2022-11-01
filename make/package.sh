@@ -7,7 +7,7 @@ source_cd="$port-$version"
 source_name="$port"
 use_crosscompiler=true
 build() {
-    ./configure --prefix=$PREFIX
+    ./configure --prefix=$PREFIX --target=x86_64-pc-linux --host=x86_64-pc-linux
     ./build.sh -j$(nproc)
 }
 
