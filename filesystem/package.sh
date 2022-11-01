@@ -10,7 +10,7 @@ build() {
 }
 
 install() {
-    for dir in dev proc sys tmp run lib etc usr usr/ports; do
+    for dir in dev proc sys tmp run lib etc usr usr/ports mnt boot; do
         mkdir $INSTALL_PATH/$dir
     done
     for dir in {s,}bin lib; do
