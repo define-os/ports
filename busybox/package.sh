@@ -8,7 +8,7 @@ source_cd="$_port-$version"
 use_crosscompiler=true
 build() {
     cp $PORTDIR/busybox.config .config
-    make -j$(nproc)
+    make CONFIG_CROSS_COMPILER_PREFIX=$CROSS_COMPILER -j$(nproc)
 }
 
 install() {
