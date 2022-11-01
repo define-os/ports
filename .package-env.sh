@@ -2,7 +2,7 @@
 #packagesdb="/usr/ports/packages.db"
 packagesdb="../packages.db"
 
-PORTDIR=$PWD/$(basename $0)
+PORTDIR=$PWD/$(dirname $0)
 PREFIX="/usr/local"
 
 
