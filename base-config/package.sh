@@ -10,5 +10,5 @@ build() {
 }
 
 install() {
-    cp * / -r
+    cp * $INSTALL_PATH/ -r
 }
