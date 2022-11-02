@@ -1,12 +1,11 @@
 #!/usr/bin/sh ../.package-env.sh
-port='libuv'
-version='1.44.2'
-deps="make libtool"
-source_code="https://dist.$port.org/dist/v${version}/${port}-v${version}.tar.gz"
-source_cd="$port-v${version}"
+port='libtool'
+version='2.4.7'
+deps="make"
+source_code="https://ftp.gnu.org/gnu/$port/$port-$version.tar.xz"
+source_cd="$port-${version}"
 use_crosscompiler=true
 build() {
-    sh autogen.sh
     ./configure --prefix=$PREFIX --disable-static
     make -j$(nproc)
 }
