@@ -1,7 +1,7 @@
 #!/usr/bin/sh ../.package-env.sh
 port='libuv'
 version='1.44.2'
-deps="make libtool"
+deps="make libtool automake autoconf"
 source_code="https://dist.$port.org/dist/v${version}/${port}-v${version}.tar.gz"
 source_cd="$port-v${version}"
 use_crosscompiler=true
