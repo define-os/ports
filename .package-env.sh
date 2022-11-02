@@ -79,7 +79,7 @@ install_deps() {
     for dep in "${deps}"; do
         [  "x$dep" == "x" ] && return
         if [ -z "$(get_package_in_db $dep)" ]; then
-            cd "${PORTDIR}/../$dep" 2>/dev/null|| dep_build_error
+            cd "${PORTDIR}/../$dep" 2>/dev/null || dep_build_error $dep
             ./package.sh
         fi
     done
