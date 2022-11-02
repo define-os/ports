@@ -7,8 +7,11 @@ source_cd="$port-$version"
 source_name="$port"
 use_crosscompiler=true
 build() {
-    ./configure --prefix=$PREFIX --target=x86_64-pc-linux --host=x86_64-pc-linux --disable-dependency-tracking
-    ./build.sh
+    args=""
+    [ -f "/bin/make" ] || args="--disable-dependency-tracking"
+    ./configure --prefix=$PREFIX --target=x86_64-pc-linux --host=x86_64-pc-linux $args
+    [ -f "/bin/make" ] && make
+    [ -f "/bin/make" ] || ./build.sh
 }
 
 install() {
