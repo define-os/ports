@@ -14,6 +14,6 @@ install() {
         mkdir $INSTALL_PATH/$dir -p
     done
     for dir in {s,}bin lib; do
-         ln -s ../usr/$dir  $INSTALL_PATH/$dir
+         ln -s usr/$dir  $INSTALL_PATH/$dir
     done
 }
