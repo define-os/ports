@@ -7,7 +7,9 @@ source_cd="$port-$port-${version}"
 use_crosscompiler=true
 build() {
     ./buildconf
-    ./configure --prefix=$PREFIX --disable-static --with-openssl --with-sysroot=$INSTALL_PATH
+    ARGS=""
+    [ -f "/usr/lib/libssl.so" ] && ARGS="--with-openssl"
+    ./configure --prefix=$PREFIX --disable-static --with-sysroot=$INSTALL_PATH $ARGS
     make -j$(nproc)
 }
 
