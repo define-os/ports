@@ -8,7 +8,7 @@ source_name="$port"
 use_crosscompiler=true
 build() {
     ./autogen.sh
-    ./configure --prefix=$PREFIX
+    ./configure --prefix=$PREFIX --disable-static
     make -j$(nproc)
 }
 
