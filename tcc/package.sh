@@ -3,7 +3,7 @@ port='tcc'
 version='29ae3ed'
 commit_long="4d5b83eec43598d6cd7949bccb41c8083"
 deps=""
-source_code="http://download.savannah.gnu.org/releases/tinycc/$port-$version$commit_long.tar.gz"
+source_code="http://repo.or.cz/tinycc.git/shapshot/$port-$version$commit_long.tar.gz"
 source_cd="$port-$version"
 use_crosscompiler=true
 build() {
