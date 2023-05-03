@@ -16,6 +16,7 @@ use_crosscompiler=false
 
 #HELPERS
 init_db(){
+    [ -d "$INSTALL_PATH/usr/ports" ] || mkdir $INSTALL_PATH/usr/ports -p
     touch $packagesdb
 }
 
