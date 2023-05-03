@@ -92,7 +92,7 @@ prepare_dirs() {
 download_source() {
     log "unpacking source code, Please wait..."
     [ -f "$port-$version.tar.xz" ] || wget $source_code -O $PORTDIR/$port-$version.tar.xz
-    tar xf $PORTDIR/$port-$version.tar.xz -C "$PORTDIR/build" || tar xf $PORTDIR/$port-$version.tar.gz -C "$PORTDIR/build"
+    tar xf $PORTDIR/$port-$version.tar.xz -C "$PORTDIR/build"
 }
 
 init_db
